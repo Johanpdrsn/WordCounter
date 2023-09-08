@@ -6,12 +6,6 @@ namespace CountWordsTests;
 [Collection("FilesCollectionFixture")]
 public class WordCounterTests
 {
-    private readonly FilesFixture _filesFixture;
-    public WordCounterTests(FilesFixture filesFixture)
-    {
-        _filesFixture = filesFixture;
-    }
-
     [Fact]
     public async void Throws_When_File_Doesnt_Exist()
     {

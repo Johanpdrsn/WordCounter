@@ -3,13 +3,6 @@ namespace CountWordsTests;
 [Collection("FilesCollectionFixture")]
 public class CountWordsIntegrationTest
 {
-    private readonly FilesFixture _filesFixture;
-
-    public CountWordsIntegrationTest(FilesFixture filesFixture)
-    {
-        _filesFixture = filesFixture;
-    }
-
     [Fact]
     public void CountWords_Main_WithValidFiles_ReturnsCorrectWordCounts()
     {
