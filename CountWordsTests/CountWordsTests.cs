@@ -1,17 +1,17 @@
 namespace CountWordsTests;
 
 [Collection("FilesCollectionFixture")]
-public class WordCountTests
+public class CountWordsIntegrationTest
 {
     private readonly FilesFixture _filesFixture;
 
-    public WordCountTests(FilesFixture filesFixture)
+    public CountWordsIntegrationTest(FilesFixture filesFixture)
     {
         _filesFixture = filesFixture;
     }
 
     [Fact]
-    public void WordCount_Main_WithValidFiles_ReturnsCorrectWordCounts()
+    public void CountWords_Main_WithValidFiles_ReturnsCorrectWordCounts()
     {
         var filePath1 = Path.Combine(FilesFixture.TestDirectory, "TestFile1.txt");
         var filePath2 = Path.Combine(FilesFixture.TestDirectory, "TestFile2.txt");
