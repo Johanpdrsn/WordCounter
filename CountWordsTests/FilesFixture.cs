@@ -4,10 +4,8 @@ public class FilesFixture : IDisposable
 {
     public FilesFixture()
     {
-        // Create a directory for test files
         Directory.CreateDirectory(TestDirectory);
 
-        // Create test files
         File.WriteAllLines(Path.Combine(TestDirectory, "TestFile.txt"), new[]
         {
                 "And this is a test.",
@@ -27,8 +25,8 @@ public class FilesFixture : IDisposable
 
     public void Dispose()
     {
-        // Clean up test files and directory
         Directory.Delete(TestDirectory, true);
+        GC.SuppressFinalize(this);
     }
 
     public static string TestDirectory => "TestFiles";
