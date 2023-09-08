@@ -5,7 +5,7 @@ C# program that counts occurrences of unique words. Words are separated by space
 
 ## How to use
 
-Count the of 1 or multiple files
+Count the words of 1 or multiple files
 
 ```
 dotnet run --project CountWords YourFile1 Yourfile2
